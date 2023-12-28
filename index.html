@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> --SFK | Newsletter SignUp Form with Success Message and Client-Side Validation</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body>
+                    <!-- SUBSCRIPTION BOX -->
+
+    <div class="subsc-container" id="subscBox">
+        <div class="container-info">
+            <h1>Stay updated!</h1>
+
+            <p class="desc">
+                Join 60,000+ product managers receiving monthly updates on: 
+            </p>
+
+            <div class="details">
+                <div class="detail">
+                    <img src="./assets/img/icon-list.svg" alt="" class="detail-icon">
+                    <p class="detail-desc">
+                        Product discovery and building what matters
+                    </p>
+                </div>
+                <div class="detail">
+                    <img src="./assets/img/icon-list.svg" alt="" class="detail-icon">
+                    <p class="detail-desc">
+                        Meausring to ensure updates are a success
+                    </p>
+                </div>
+                <div class="detail">
+                    <img src="./assets/img/icon-list.svg" alt="" class="detail-icon">
+                    <p class="detail-desc">
+                        And much more!
+                    </p>
+                </div>
+            </div>
+
+            <form action="#"  id="subscribeForm" onsubmit="sendEmail(), reset();">
+                <div class="subsc-box-info">
+                    <label for="email-box">Email address</label>
+                    <p id="errorInfo" class="error-info"></p>
+                </div>
+
+                <input type="email"  id="email-box" placeholder="email@company.com">
+
+                <button type="submit">
+                    Subscribe to monthly letter
+                </button>
+            </form>
+        </div>
+
+        <div class="container-img">
+            <img src="./assets/img/illustration-sign-up-desktop.svg" class="img1" alt="">
+            <img src="./assets/img/illustration-sign-up-mobile.svg" class="img2"  alt="">
+        </div>
+    </div>
+
+
+
+                <!-- SUCCESS MESSAGE BOX -->
+
+    <div class="subc-container" id="successMsg">
+        <div class="subc-icon">
+            <img src="./assets/img/icon-success.svg" alt="">
+        </div>
+
+        <h1>Thanks for subscribing!</h1>
+        
+        <p class="desc">
+            A confirmation message  has been sent to 
+            <strong><span id="userEmail"></span></strong>. 
+            Please open and click the button inside to confirm your subscription.
+        </p>
+
+        <button id="dismissBtn">Dismiss message</button>
+    </div>         
+
+    
+    <script src="./assets/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
